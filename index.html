@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap"
     rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=BenchNine:wght@700&family=Cutive+Mono&display=swap">
   <title>chia-ling hsu</title>
   <script>
     // On page load or when changing themes, best to add inline in `head` to avoid FOUC
@@ -66,6 +67,186 @@
       height: 100%;
       object-fit: cover;
     }
+
+    .font-italic {
+      font-style: italic;
+    }
+
+    .mt-0 {
+      margin-top: 0;
+    }
+
+    .mb-0 {
+      margin-bottom: 0;
+    }
+
+    .mb-24 {
+      margin-bottom: 24px;
+    }
+
+    .fine-list {
+      margin: 0;
+      padding: 0;
+    }
+
+    .fine-list li {
+      list-style-type: none;
+      padding: 4px 0;
+    }
+
+    .flex-item {
+      display: flex;
+      justify-content: space-between;
+      padding-top: 4px;
+      padding-bottom: 4px;
+    }
+
+    .flex-item h4 {
+      margin: 0;
+    }
+
+    #wrapper {
+      background: #ccc;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .container {
+      display: flex;
+    }
+
+    .section-heading {
+      margin-bottom: 12px;
+      margin-top: 0;
+    }
+
+    #aside {
+      flex: 240px 0 0;
+      background: #262427;
+      color: #fff;
+    }
+
+    .avatar {
+      width: 120px;
+      height: 120px;
+      border-radius: 50rem;
+      overflow: hidden;
+      margin: 24px;
+    }
+
+    .avatar img {
+      width: 100%;
+      height: 100%;
+    }
+
+    #aside h4 {
+      margin-bottom: 8px;
+      margin-top: 0;
+      font-size: 0.875rem;
+      font-weight: 600;
+    }
+
+    #aside p {
+      font-size: 0.875rem;
+      margin-top: 0;
+      margin-bottom: 16px;
+    }
+
+    .aside-section {
+      padding-left: 25px;
+    }
+
+    .section-content {
+      padding-right: 16px;
+      padding-top: 16px;
+      padding-bottom: 16px;
+    }
+
+    #aside hr {
+      margin-top: 0;
+      margin-bottom: 0;
+      border: none;
+      background-color: #eee;
+      height: 1px;
+    }
+
+    #main {
+      flex: auto 1 1;
+      background: #fff;
+      padding: 24px;
+      padding-top: 48px;
+    }
+
+    #main h2,
+    #main h3 {
+      margin: 0;
+      color: #333;
+    }
+
+    #main h4 {
+      color: #333;
+    }
+
+    #main p {
+      color: #777;
+      font-size: 0.875rem;
+      line-height: 1.5;
+    }
+
+    #main ul {
+      margin: 0;
+      padding-left: 24px;
+    }
+
+    #main ul li {
+      padding-top: 2px;
+      padding-bottom: 2px;
+      color: #777;
+    }
+
+    #main hr {
+      background-color: #ccc;
+      border: none;
+      height: 1px;
+      margin-bottom: 24px;
+    }
+
+    .main-section {
+      margin-bottom: 32px;
+    }
+
+    .progress {
+      display: -ms-flexbox;
+      display: flex;
+      height: 1rem;
+      overflow: hidden;
+      font-size: 0.75rem;
+      background-color: #ddd;
+      border-radius: 0.25rem;
+      min-width: 300px;
+      height: 8px;
+    }
+
+    .progress-bar {
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -ms-flex-pack: center;
+      justify-content: center;
+      overflow: hidden;
+      color: #fff;
+      text-align: center;
+      white-space: nowrap;
+      background-color: #666;
+      transition: width 0.6s ease;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .progress-bar {
+        transition: none;
+      }
+    }
   </style>
 </head>
 
@@ -102,6 +283,7 @@
       </div>
     </nav>
   </header>
+
   <!-- -about me -->
   <div id="section01">
     <section class="dark:bg-gray-900">
@@ -141,7 +323,165 @@
                   <span class="sr-only">Close modal</span>
                 </button>
                 <div class="px-6 py-6 lg:px-8 w-full h-full">
-                  <img src="./image/resume (1)_page-0001.jpg">
+                  <div id="wrapper">
+                    <div class="container">
+                      <aside id="aside">
+                        <div class="aside-section">
+                          <aside id="aside">
+                            <div class="avatar">
+                              <img class="object-cover" src="./image/linda.JPG" alt="me" />
+                            </div>
+                        </div>
+                        <div class="aside-section">
+                          <h3 class="section-heading">Profilo</h3>
+                          <hr />
+                          <div class="section-content">
+                            <h4>Name:</h4>
+                            <p>徐嘉伶</p>
+                            <h4>Email Address:</h4>
+                            <p>h200022923@gmail.com</p>
+                            <h4>Phone:</h4>
+                            <p>+886 0921 952906</p>
+                            <h4>Address:</h4>
+                            <p>
+                              台北市信義區
+                            </p>
+                            <h4>Sex:</h4>
+                            <p>Female</p>
+                          </div>
+                        </div>
+                        <div class="aside-section">
+                          <div class="section-content">
+
+                          </div>
+                        </div>
+                        <!-- .aside-section -->
+
+                        <div class="aside-section">
+                          <h3 class="section-heading">Interests</h3>
+                          <hr />
+                          <div class="section-content">
+                            <ul class="fine-list">
+                              <li>Photography</li>
+                              <li>Programming</li>
+                              <li>Cooking</li>
+                            </ul>
+                          </div>
+                        </div>
+                        <!-- .aside-section -->
+
+                        <div class="aside-section">
+                          <h3 class="section-heading">Languages</h3>
+                          <hr />
+                          <div class="section-content">
+                            <div class="flex-list">
+                              <div class="flex-item">
+                                <span>Chinese</span>
+                                <span>Native</span>
+                              </div>
+                              <div class="flex-item">
+                                <span>English</span>
+                                <span>Fluent</span>
+                              </div>
+                              <div class="flex-item">
+                                <span>French</span>
+                                <span>Good</span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- .aside-section -->
+                      </aside>
+                      <main id="main">
+                        <section class="main-section">
+                          <h2>關於我</h2>
+                          <hr />
+                          <p>
+                            你好，我是徐嘉伶，在校期間曾選修網頁設計課程，具有相當濃厚的興趣，大學畢業後，思考自己是否有其他發展的可能性，於是參加為期半年的專業訓練，習得HTML、CSS、SASS、SCSS、Figma、JavaScript、jQuery、Bootstrap及Vue.js等前端網頁開發技術。
+                            <br>
+                            可以獨立完成RWD網頁設計與網頁互動腳本的撰寫，能使用前端框架、串接後端資料庫及 API 資料串接應用，建置具前後台網頁功能的網站。
+                            前端開發技術日新月異，唯有持續不斷的精進，才能成為一位為團隊及公司帶來價值的前端開發工程師。
+                          </p>
+                        </section>
+
+                        <section class="main-section">
+                          <h3>學歷</h3>
+                          <hr />
+                          <div class="mb-24">
+                            <div class="flex-item">
+                              <h4>前端網頁開發技術（青年專班）</h4>
+                              <span>2022 09 - 2023 03</span>
+                            </div>
+                            <p class="font-italic mt-0">
+                              泰山職訓局
+                            </p>
+                          </div>
+
+                          <div class="mb-24">
+                            <div class="flex-item">
+                              <h4>法國語文學系</h4>
+                              <span>2018 09 - 2022 06</span>
+                            </div>
+                            <p class="font-italic mt-0">
+                              私立淡江大學
+                            </p>
+                          </div>
+                        </section>
+
+                        <section class="main-section">
+                          <h3>工作經歷</h3>
+                          <hr />
+                          <div class="mb-24">
+                            <div class="flex-item">
+                              <h4>台灣文創發展股份有限公司</h4>
+                              <span> 2021 12 - 2022 05</span>
+                            </div>
+                            <p class="font-italic mt-0">活動部實習生</p>
+                            <p>
+                              1. 應用良好的溝通能力以及簡報，協助主管每週能夠快速了解當週活動的成效，以及妥善完成主管交代的事項。 <br>
+                              2. 當主管遇到文書處理相關問題時，能夠快速的幫主管解決問題。<br>
+                              3. 協助聯繫客戶合約、開發票以及退保等相關進度監督。<br>
+                              4. 向客戶介紹華山場地以及給予一些辦活動的建議。<br>
+                              5. 活動期間去巡場並記錄活動的成效是否達到預期成果並回報給主管。<br>
+                              6. 活動進場與撤場確實地和廠商點交，確保雙方權益。
+                            </p>
+                          </div>
+                        </section>
+
+                        <section class="main-section">
+                          <h3>技能</h3>
+                          <hr />
+                          <div class="flex-item">
+                            <h4>Microsoft Office</h4>
+                            <div class="progress">
+                              <div class="progress-bar" style="width: 75%"></div>
+                            </div>
+                          </div>
+
+                          <div class="flex-item">
+                            <h4>Js & Jq & Vue</h4>
+                            <div class="progress">
+                              <div class="progress-bar" style="width: 70%"></div>
+                            </div>
+                          </div>
+
+                          <div class="flex-item">
+                            <h4>HTML & CSS</h4>
+                            <div class="progress">
+                              <div class="progress-bar" style="width: 90%"></div>
+                            </div>
+                          </div>
+
+                          <div class="flex-item">
+                            <h4>Photoshop & Ilustratorr & figma</h4>
+                            <div class="progress">
+                              <div class="progress-bar" style="width: 70%"></div>
+                            </div>
+                          </div>
+                        </section>
+                      </main>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -893,7 +1233,17 @@
   </footer>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.3/flowbite.min.js"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+  <!-- -jQuery -->
+  <script src="./js/jquery-3.6.3.js"></script>
+  <!-- -magnific -->
+  <script src="./js/jquery.magnific-popup.min.js"></script>
+  <!-- -gsap 主程式-->
+  <script src="./Gsap/gsap.js"></script>
+  <script src="./Gsap/ScrollToPlugin.js"></script>
+  <script src="./Gsap/ScrollTrigger.js"></script>
+  <script src="./Gsap/SplitText.min.js"></script>
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
   <script>
     AOS.init();
 
