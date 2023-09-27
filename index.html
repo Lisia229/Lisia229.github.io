@@ -12,6 +12,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap"
     rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=BenchNine:wght@700&family=Cutive+Mono&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
+
   <title>chia-ling hsu</title>
   <script>
     // On page load or when changing themes, best to add inline in `head` to avoid FOUC
@@ -77,6 +79,22 @@
       object-fit: cover;
     }
 
+    .swiper-pagination-bullet {
+      width: 20px;
+      height: 20px;
+      text-align: center;
+      line-height: 20px;
+      font-size: 12px;
+      color: #fff;
+      opacity: 1;
+      background: rgba(0, 0, 0, 0.8);
+    }
+
+    .swiper-pagination-bullet-active {
+      color: #fff;
+      background: #d68de2;
+    }
+
     .font-italic {
       font-style: italic;
     }
@@ -137,6 +155,8 @@
       display: none;
     }
 
+
+
     @media (min-width: 1024px) {
       #fish {
         display: block;
@@ -160,7 +180,52 @@
       #linebot:hover::before {
         display: block;
       }
+
     }
+
+    /* 在RWD 768px 到 1024px 尺寸下顯示 #banner-m */
+    @media only screen and (min-width: 768px) and (max-width: 1024px) {
+      #banner-m {
+        display: block;
+        /* 或其他您需要的顯示屬性 */
+      }
+    }
+
+    /* 在其他尺寸下隱藏 #banner-m */
+    @media only screen and (max-width: 767px),
+    only screen and (min-width: 1025px) {
+      #banner-m {
+        display: none;
+      }
+    }
+
+    .banner-m {
+      width: 786px;
+    }
+
+    .banner-s {
+      max-width: 100%;
+      /* 將最大寬度設置為100%，即螢幕寬度的百分之百 */
+      width: 300px;
+      /* 自動調整寬度以適應內容 */
+    }
+
+
+    /* 在RWD 手機尺寸下（通常是小於768px）顯示 #banner-s */
+    @media only screen and (max-width: 767px) {
+      #banner-s {
+        display: block;
+        /* 或其他您需要的顯示屬性 */
+      }
+    }
+
+    /* 在其他尺寸下隱藏 #banner-s */
+    @media only screen and (min-width: 768px) {
+      #banner-s {
+        display: none;
+      }
+    }
+
 
 
     #aside {
@@ -387,6 +452,10 @@
       top: -125px;
       left: -157px;
       opacity: 0.6;
+    }
+
+    #navbar {
+      z-index: 1;
     }
   </style>
 </head>
@@ -910,10 +979,19 @@
                   <span>Tailwind</span>
                 </li>
                 <li class="flex items-center space-x-3">
-                  
-                  <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="20px" height="20px" viewBox="0 0 50 50">
-                    <path fill="#fff" d="M24 4.050000000000001A19.95 19.95 0 1 0 24 43.95A19.95 19.95 0 1 0 24 4.050000000000001Z"></path><path fill="#01579b" d="M8.001,24c0,6.336,3.68,11.806,9.018,14.4L9.385,17.488C8.498,19.479,8.001,21.676,8.001,24z M34.804,23.194c0-1.977-1.063-3.35-1.67-4.412c-0.813-1.329-1.576-2.437-1.576-3.752c0-1.465,1.471-2.84,3.041-2.84 c0.071,0,0.135,0.006,0.206,0.008C31.961,9.584,28.168,8,24.001,8c-5.389,0-10.153,2.666-13.052,6.749 c0.228,0.074,0.307,0.039,0.611,0.039c1.669,0,4.264-0.2,4.264-0.2c0.86-0.057,0.965,1.212,0.099,1.316c0,0-0.864,0.105-1.828,0.152 l5.931,17.778l3.5-10.501l-2.603-7.248c-0.861-0.046-1.679-0.152-1.679-0.152c-0.862-0.056-0.762-1.375,0.098-1.316 c0,0,2.648,0.2,4.217,0.2c1.675,0,4.264-0.2,4.264-0.2c0.861-0.057,0.965,1.212,0.104,1.316c0,0-0.87,0.105-1.832,0.152l5.891,17.61 l1.599-5.326C34.399,26.289,34.804,24.569,34.804,23.194z M24.281,25.396l-4.8,13.952c1.436,0.426,2.95,0.652,4.52,0.652 c1.861,0,3.649-0.324,5.316-0.907c-0.04-0.071-0.085-0.143-0.118-0.22L24.281,25.396z M38.043,16.318 c0.071,0.51,0.108,1.059,0.108,1.645c0,1.628-0.306,3.451-1.219,5.737l-4.885,14.135C36.805,35.063,40,29.902,40,24 C40,21.219,39.289,18.604,38.043,16.318z"></path><path fill="#01579b" d="M4,24c0,11.024,8.97,20,19.999,20C35.03,44,44,35.024,44,24S35.03,4,24,4S4,12.976,4,24z M5.995,24 c0-9.924,8.074-17.999,18.004-17.999S42.005,14.076,42.005,24S33.929,42.001,24,42.001C14.072,42.001,5.995,33.924,5.995,24z"></path>
-                    </svg>
+
+                  <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="20px" height="20px"
+                    viewBox="0 0 50 50">
+                    <path fill="#fff"
+                      d="M24 4.050000000000001A19.95 19.95 0 1 0 24 43.95A19.95 19.95 0 1 0 24 4.050000000000001Z">
+                    </path>
+                    <path fill="#01579b"
+                      d="M8.001,24c0,6.336,3.68,11.806,9.018,14.4L9.385,17.488C8.498,19.479,8.001,21.676,8.001,24z M34.804,23.194c0-1.977-1.063-3.35-1.67-4.412c-0.813-1.329-1.576-2.437-1.576-3.752c0-1.465,1.471-2.84,3.041-2.84 c0.071,0,0.135,0.006,0.206,0.008C31.961,9.584,28.168,8,24.001,8c-5.389,0-10.153,2.666-13.052,6.749 c0.228,0.074,0.307,0.039,0.611,0.039c1.669,0,4.264-0.2,4.264-0.2c0.86-0.057,0.965,1.212,0.099,1.316c0,0-0.864,0.105-1.828,0.152 l5.931,17.778l3.5-10.501l-2.603-7.248c-0.861-0.046-1.679-0.152-1.679-0.152c-0.862-0.056-0.762-1.375,0.098-1.316 c0,0,2.648,0.2,4.217,0.2c1.675,0,4.264-0.2,4.264-0.2c0.861-0.057,0.965,1.212,0.104,1.316c0,0-0.87,0.105-1.832,0.152l5.891,17.61 l1.599-5.326C34.399,26.289,34.804,24.569,34.804,23.194z M24.281,25.396l-4.8,13.952c1.436,0.426,2.95,0.652,4.52,0.652 c1.861,0,3.649-0.324,5.316-0.907c-0.04-0.071-0.085-0.143-0.118-0.22L24.281,25.396z M38.043,16.318 c0.071,0.51,0.108,1.059,0.108,1.645c0,1.628-0.306,3.451-1.219,5.737l-4.885,14.135C36.805,35.063,40,29.902,40,24 C40,21.219,39.289,18.604,38.043,16.318z">
+                    </path>
+                    <path fill="#01579b"
+                      d="M4,24c0,11.024,8.97,20,19.999,20C35.03,44,44,35.024,44,24S35.03,4,24,4S4,12.976,4,24z M5.995,24 c0-9.924,8.074-17.999,18.004-17.999S42.005,14.076,42.005,24S33.929,42.001,24,42.001C14.072,42.001,5.995,33.924,5.995,24z">
+                    </path>
+                  </svg>
                   <span>Wordpress</span>
                 </li>
 
@@ -1619,6 +1697,319 @@
     </div>
   </section>
 
+  <section id="section05" class="bg-white dark:bg-gray-900">
+    <div class="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12">
+      <div class="mr-auto place-self-center lg:col-span-5 p-1">
+        <h1
+          class="max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl dark:text-white">
+          Banner Design</h1>
+        <p class="max-w-2xl mb-6 font-light text-gray-500 lg:mb-8 md:text-lg lg:text-xl dark:text-gray-400">每月活動Banner設計
+        </p>
+      </div>
+      <div class="hidden lg:block lg:mt-0 lg:col-span-7 lg:flex">
+        <!-- Swiper -->
+        <div class="swiper mySwiper h-auto">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide rounded-lg ">
+              <a href="./image/banner/b-01.jpg" data-lightbox="./image/banner/b-01.jpg" data-title="banner-1">
+                <img src="./image/banner/b-01.jpg" alt="圖片1">
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="./image/banner/b-02.jpg" data-lightbox="./image/banner/b-01.jpg" data-title="banner-2">
+                <img src="./image/banner/b-02.jpg" alt="圖片2">
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="./image/banner/b-03.jpg" data-lightbox="./image/banner/b-03.jpg" data-title="banner-3">
+                <img src="./image/banner/b-03.jpg" alt="圖片3">
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="./image/banner/b-04.jpg" data-lightbox="./image/banner/b-04.jpg" data-title="banner-4">
+                <img src="./image/banner/b-04.jpg" alt="圖片4">
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="./image/banner/b-05.jpg" data-lightbox="./image/banner/b-05.jpg" data-title="banner-5">
+                <img src="./image/banner/b-05.jpg" alt="圖片5">
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="./image/banner/b-06.jpg" data-lightbox="./image/banner/b-06.jpg" data-title="banner-6">
+                <img src="./image/banner/b-06.jpg" alt="圖片6">
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="./image/banner/b-07.jpg" data-lightbox="./image/banner/b-07.jpg" data-title="banner-7">
+                <img src="./image/banner/b-07.jpg" alt="圖片7">
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="./image/banner/b-08.jpg" data-lightbox="./image/banner/b-08.jpg" data-title="banner-8">
+                <img src="./image/banner/b-08.jpg" alt="圖片8">
+              </a>
+            </div>
+
+            <div class="swiper-slide">
+              <a href="./image/banner/b-09.jpg" data-lightbox="./image/banner/b-09.jpg" data-title="banner-9">
+                <img src="./image/banner/b-09.jpg" alt="圖片9">
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="./image/banner/b-10.jpg" data-lightbox="./image/banner/b-10.jpg" data-title="banner-10">
+                <img src="./image/banner/b-10.jpg" alt="圖片10">
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="./image/banner/b-11.jpg" data-lightbox="./image/banner/b-11.jpg" data-title="banner-11">
+                <img src="./image/banner/b-11.jpg" alt="圖片11">
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="./image/banner/b-12.jpg" data-lightbox="./image/banner/b-12.jpg" data-title="banner-12">
+                <img src="./image/banner/b-12.jpg" alt="圖片12">
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="./image/banner/b-13.jpg" data-lightbox="./image/banner/b-13.jpg" data-title="banner-13">
+                <img src="./image/banner/b-13.jpg" alt="圖片13">
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="./image/banner/b-14.jpg" data-lightbox="./image/banner/b-14.jpg" data-title="banner-14">
+                <img src="./image/banner/b-14.jpg" alt="圖片14">
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="./image/banner/b-16.jpg" data-lightbox="./image/banner/b-16.jpg" data-title="banner-16">
+                <img src="./image/banner/b-16.jpg" alt="圖片16">
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="./image/banner/b-15.jpg" data-lightbox="./image/banner/b-15.jpg" data-title="banner-15">
+                <img src="./image/banner/b-15.jpg" alt="圖片15">
+              </a>
+            </div>
+
+            <div class="swiper-slide">
+              <a href="./image/banner/b-17.jpg" data-lightbox="./image/banner/b-17.jpg" data-title="banner-17">
+                <img src="./image/banner/b-17.jpg" alt="圖片17">
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="./image/banner/b-18.jpg" data-lightbox="./image/banner/b-18.jpg" data-title="banner-18">
+                <img src="./image/banner/b-18.jpg" alt="圖片18">
+              </a>
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+      <div id="banner-m" class="lg:mt-0 lg:col-span-7 lg:flex">
+        <!-- Swiper -->
+        <div class="swiper banner-m mySwiper h-auto">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide rounded-lg ">
+              <a href="./image/banner/m-01.jpg" data-lightbox="./image/banner/m-01.jpg" data-title="banner-1">
+                <img src="./image/banner/m-01.jpg" alt="圖片1">
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="./image/banner/m-02.jpg" data-lightbox="./image/banner/m-01.jpg" data-title="banner-2">
+                <img src="./image/banner/m-02.jpg" alt="圖片2">
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="./image/banner/m-03.jpg" data-lightbox="./image/banner/m-03.jpg" data-title="banner-3">
+                <img src="./image/banner/m-03.jpg" alt="圖片3">
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="./image/banner/m-04.jpg" data-lightbox="./image/banner/m-04.jpg" data-title="banner-4">
+                <img src="./image/banner/m-04.jpg" alt="圖片4">
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="./image/banner/m-05.jpg" data-lightbox="./image/banner/m-05.jpg" data-title="banner-5">
+                <img src="./image/banner/m-05.jpg" alt="圖片5">
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="./image/banner/m-06.jpg" data-lightbox="./image/banner/m-06.jpg" data-title="banner-6">
+                <img src="./image/banner/m-06.jpg" alt="圖片6">
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="./image/banner/m-07.jpg" data-lightbox="./image/banner/m-07.jpg" data-title="banner-7">
+                <img src="./image/banner/m-07.jpg" alt="圖片7">
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="./image/banner/m-08.jpg" data-lightbox="./image/banner/m-08.jpg" data-title="banner-8">
+                <img src="./image/banner/m-08.jpg" alt="圖片8">
+              </a>
+            </div>
+
+            <div class="swiper-slide">
+              <a href="./image/banner/m-09.jpg" data-lightbox="./image/banner/m-09.jpg" data-title="banner-9">
+                <img src="./image/banner/m-09.jpg" alt="圖片9">
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="./image/banner/m-10.jpg" data-lightbox="./image/banner/m-10.jpg" data-title="banner-10">
+                <img src="./image/banner/m-10.jpg" alt="圖片10">
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="./image/banner/m-11.jpg" data-lightbox="./image/banner/m-11.jpg" data-title="banner-11">
+                <img src="./image/banner/m-11.jpg" alt="圖片11">
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="./image/banner/m-12.jpg" data-lightbox="./image/banner/m-12.jpg" data-title="banner-12">
+                <img src="./image/banner/m-12.jpg" alt="圖片12">
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="./image/banner/m-13.jpg" data-lightbox="./image/banner/m-13.jpg" data-title="banner-13">
+                <img src="./image/banner/m-13.jpg" alt="圖片13">
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="./image/banner/m-14.jpg" data-lightbox="./image/banner/m-14.jpg" data-title="banner-14">
+                <img src="./image/banner/m-14.jpg" alt="圖片14">
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="./image/banner/m-16.jpg" data-lightbox="./image/banner/m-16.jpg" data-title="banner-16">
+                <img src="./image/banner/m-16.jpg" alt="圖片16">
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="./image/banner/m-15.jpg" data-lightbox="./image/banner/m-15.jpg" data-title="banner-15">
+                <img src="./image/banner/m-15.jpg" alt="圖片15">
+              </a>
+            </div>
+
+            <div class="swiper-slide">
+              <a href="./image/banner/m-17.jpg" data-lightbox="./image/banner/m-17.jpg" data-title="banner-17">
+                <img src="./image/banner/m-17.jpg" alt="圖片17">
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="./image/banner/m-18.jpg" data-lightbox="./image/banner/m-18.jpg" data-title="banner-18">
+                <img src="./image/banner/m-18.jpg" alt="圖片18">
+              </a>
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+      <div id="banner-s" class="lg:mt-0 lg:col-span-7 lg:flex">
+        <!-- Swiper -->
+        <div class="swiper banner-s mySwiper h-auto">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide rounded-lg ">
+              <a href="./image/banner/s-01.jpg" data-lightbox="./image/banner/s-01.jpg" data-title="banner-1">
+                <img src="./image/banner/s-01.jpg" alt="圖片1">
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="./image/banner/s-02.jpg" data-lightbox="./image/banner/s-01.jpg" data-title="banner-2">
+                <img src="./image/banner/s-02.jpg" alt="圖片2">
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="./image/banner/s-03.jpg" data-lightbox="./image/banner/s-03.jpg" data-title="banner-3">
+                <img src="./image/banner/s-03.jpg" alt="圖片3">
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="./image/banner/s-04.jpg" data-lightbox="./image/banner/s-04.jpg" data-title="banner-4">
+                <img src="./image/banner/s-04.jpg" alt="圖片4">
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="./image/banner/s-05.jpg" data-lightbox="./image/banner/s-05.jpg" data-title="banner-5">
+                <img src="./image/banner/s-05.jpg" alt="圖片5">
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="./image/banner/s-06.jpg" data-lightbox="./image/banner/s-06.jpg" data-title="banner-6">
+                <img src="./image/banner/s-06.jpg" alt="圖片6">
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="./image/banner/s-07.jpg" data-lightbox="./image/banner/s-07.jpg" data-title="banner-7">
+                <img src="./image/banner/s-07.jpg" alt="圖片7">
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="./image/banner/s-08.jpg" data-lightbox="./image/banner/s-08.jpg" data-title="banner-8">
+                <img src="./image/banner/s-08.jpg" alt="圖片8">
+              </a>
+            </div>
+
+            <div class="swiper-slide">
+              <a href="./image/banner/s-09.jpg" data-lightbox="./image/banner/s-09.jpg" data-title="banner-9">
+                <img src="./image/banner/s-09.jpg" alt="圖片9">
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="./image/banner/s-10.jpg" data-lightbox="./image/banner/s-10.jpg" data-title="banner-10">
+                <img src="./image/banner/s-10.jpg" alt="圖片10">
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="./image/banner/s-11.jpg" data-lightbox="./image/banner/s-11.jpg" data-title="banner-11">
+                <img src="./image/banner/s-11.jpg" alt="圖片11">
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="./image/banner/s-12.jpg" data-lightbox="./image/banner/s-12.jpg" data-title="banner-12">
+                <img src="./image/banner/s-12.jpg" alt="圖片12">
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="./image/banner/s-13.jpg" data-lightbox="./image/banner/s-13.jpg" data-title="banner-13">
+                <img src="./image/banner/s-13.jpg" alt="圖片13">
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="./image/banner/s-14.jpg" data-lightbox="./image/banner/s-14.jpg" data-title="banner-14">
+                <img src="./image/banner/s-14.jpg" alt="圖片14">
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="./image/banner/s-16.jpg" data-lightbox="./image/banner/s-16.jpg" data-title="banner-16">
+                <img src="./image/banner/s-16.jpg" alt="圖片16">
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="./image/banner/s-15.jpg" data-lightbox="./image/banner/s-15.jpg" data-title="banner-15">
+                <img src="./image/banner/s-15.jpg" alt="圖片15">
+              </a>
+            </div>
+
+            <div class="swiper-slide">
+              <a href="./image/banner/s-17.jpg" data-lightbox="./image/banner/s-17.jpg" data-title="banner-17">
+                <img src="./image/banner/s-17.jpg" alt="圖片17">
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="./image/banner/s-18.jpg" data-lightbox="./image/banner/s-18.jpg" data-title="banner-18">
+                <img src="./image/banner/s-18.jpg" alt="圖片18">
+              </a>
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
   <!-- -footer -->
   <footer id="footer" class="p-4 bg-white sm:p-6 dark:bg-gray-800 relative">
     <div class="mx-auto max-w-screen-xl">
@@ -1694,6 +2085,8 @@
   <script src="./Gsap/SplitText.min.js"></script>
   <!-- Swiper JS -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+  <!-- lightbox -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
   <script>
     AOS.init();
 
@@ -1708,6 +2101,13 @@
       },
       autoplay: {
         delay: 5000, // 自動播放，設定幾秒播放下一張
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+        renderBullet: function (index, className) {
+          return '<span class="' + className + '">' + (index + 1) + "</span>";
+        },
       },
       loop: true,
     });
@@ -1789,6 +2189,7 @@
     })
 
   </script>
+
 </body>
 
 </html>
