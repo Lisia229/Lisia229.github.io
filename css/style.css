@@ -73,6 +73,10 @@ ul {
 #nav-toggle {
   display: none;
 }
+
+#lineborder {
+  padding-bottom: 200px;
+}
 .ham {
   position: absolute;
   /* background-color: rgba(255, 169, 222, 0.85); */
