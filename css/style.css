@@ -492,9 +492,11 @@ h2 {
   color: white;
   font-family: 'Noto Sans TC';
   font-weight: 300;
-  font-size: 0.8rem;
-  line-height: 1.5rem;
-  letter-spacing: 0.3rem;
+  font-size: 0.9rem;
+  line-height: 1.2rem;
+  letter-spacing: 0.2rem;
+  text-align: justify;
+  width: 90%;
 }
 .A1,
 .A2 {
@@ -1310,5 +1312,9 @@ footer p {
 }
 
 .tku {
-  width: 250px;
+  width: 480px;
+}
+
+.margin_top{
+  margin-top: 3rem;
 }
