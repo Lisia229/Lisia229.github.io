@@ -643,6 +643,18 @@ h2 {
   justify-content: center;
   align-items: center;
 }
+.Iback,
+.E1front,
+.E1front_rwd,
+.E1back,
+.E2front,
+.E2front_rwd,
+.E2back_rwd,
+.E1back_rwd,
+.E2back {
+  border: double white 7px;
+  background-color: black;
+}
 .ep1,
 .ep2 {
   width: 420px;
@@ -659,7 +671,9 @@ h2 {
   left: -31%;
 }
 .E1front,
-.E2front {
+.E2front,
+.E1back,
+.E2back {
   width: 100%;
   height: 100%;
   display: flex;
@@ -1315,6 +1329,6 @@ footer p {
   width: 480px;
 }
 
-.margin_top{
+.margin_top {
   margin-top: 3rem;
 }
